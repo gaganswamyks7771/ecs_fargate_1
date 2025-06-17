@@ -12,5 +12,5 @@ variable "public_subnet_cidrs" {
 }
 
 variable "ecr_repo_name" {
-  default = "ecs-fargate-app-repo"
+  default = "ecs-fargate-app-repos"
 }

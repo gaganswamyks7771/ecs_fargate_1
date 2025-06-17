@@ -11,7 +11,7 @@ jobs:
 
     env:
       AWS_REGION: us-east-1
-      ECR_REPOSITORY: <ecs-fargate-app-repo> # e.g., fargate-app
+      ECR_REPOSITORY: <ecs-fargate-app-repos> # e.g., fargate-app
       IMAGE_TAG: latest
 
     steps:
