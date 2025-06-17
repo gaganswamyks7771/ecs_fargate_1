@@ -53,7 +53,7 @@ resource "aws_route_table_association" "public" {
 }
 
 
-/*resource "aws_ecr_repository" "app_repo" {
+resource "aws_ecr_repository" "app_repo" {
   name = var.ecr_repo_name
 
   image_scanning_configuration {
@@ -63,7 +63,7 @@ resource "aws_route_table_association" "public" {
   tags = {
     Name = "ECR Repo for ECS App"
   }
-}*/
+}
 
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
