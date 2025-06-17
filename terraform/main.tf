@@ -103,7 +103,7 @@ resource "aws_ecs_task_definition" "app_task" {
   container_definitions = jsonencode([
     {
       name      = "app-container"
-      image     = 476114146401.dkr.ecr.us-east-1.amazonaws.com/ecs-fargate-app-repo  # <== from ECR
+      image     = "476114146401.dkr.ecr.us-east-1.amazonaws.com/ecs-fargate-app-repo"  
       essential = true
       portMappings = [
         {
