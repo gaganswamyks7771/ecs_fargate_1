@@ -53,7 +53,7 @@ resource "aws_route_table_association" "public" {
 }
 
 
-resource "aws_ecr_repository" "app_repo" {
+/*resource "aws_ecr_repository" "app_repo" {
   name = var.ecr_repo_name
 
   image_scanning_configuration {
@@ -63,7 +63,7 @@ resource "aws_ecr_repository" "app_repo" {
   tags = {
     Name = "ECR Repo for ECS App"
   }
-}
+}*/
 
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
@@ -103,7 +103,7 @@ resource "aws_ecs_task_definition" "app_task" {
   container_definitions = jsonencode([
     {
       name      = "app-container"
-      image     = aws_ecr_repository.app_repo.repository_url  # <== from ECR
+      image     = 476114146401.dkr.ecr.us-east-1.amazonaws.com/ecs-fargate-app-repo  # <== from ECR
       essential = true
       portMappings = [
         {
